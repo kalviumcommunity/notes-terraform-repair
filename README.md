@@ -2,6 +2,16 @@
 
 This repository holds the Terraform configuration for the CloudNotes notes API. It uses the built-in `terraform_data` resource, so it needs **no cloud provider, no cloud account, no credential, and no billing**. You only run `init`, `validate`, and `plan`. **Never run `terraform apply`.**
 
+## Before timed work
+
+Fork `https://github.com/kalviumcommunity/notes-terraform-repair`, clone your fork and create `fix/terraform-repair`. Use Linux, macOS or WSL2 with Bash, Python 3, Git, curl and Terraform >=1.5 below 2.0. Install CLI for your host architecture (amd64/arm64). No Docker, external provider, cloud login or application service required. Internet needed for GitHub and initial tool installation. Free editor and PDF exporter suffice.
+
+```bash
+bash scripts/prerequisites.sh
+```
+
+Start timing only after `SETUP READY`. Helper checks Terraform version and performs init/validate on separate built-in-provider probe without changing repair files. Assessed init/validate/plan failures remain intentional until repairs. Never commit generated state/plans; existing tracked state safety remains part of repair. Capture genuine original failures, changes and final checks in PDF. Push only to your personal fork; no upstream PR. Setup errors are not assessed faults.
+
 ## Layout
 
 ```text
